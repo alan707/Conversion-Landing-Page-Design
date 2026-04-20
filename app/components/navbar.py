@@ -2,89 +2,68 @@ import reflex as rx
 from app.states.landing_state import LandingState
 
 
-def nav_link(label: str, href: str) -> rx.Component:
-    return rx.el.a(
-        label,
-        href=href,
-        class_name="text-sm font-medium text-gray-600 hover:text-indigo-600 transition-colors duration-200",
-    )
-
-
 def navbar() -> rx.Component:
     return rx.el.nav(
         rx.el.div(
             rx.el.div(
                 rx.el.a(
-                    rx.el.div(
-                        rx.icon("layers", class_name="h-6 w-6 text-indigo-600"),
-                        rx.el.span(
-                            "Nexus",
-                            class_name="text-xl font-bold tracking-tight text-gray-900",
-                        ),
-                        class_name="flex items-center gap-2",
-                    ),
+                    "LLC Keeper",
                     href="/",
-                ),
-                rx.el.div(
-                    nav_link("Features", "#features"),
-                    nav_link("Pricing", "#pricing"),
-                    nav_link("About", "#"),
-                    class_name="hidden md:flex items-center gap-8",
+                    class_name="text-xl font-bold tracking-tight text-[#0F172A]",
                 ),
                 rx.el.div(
                     rx.el.a(
-                        "Log In",
-                        href="#",
-                        class_name="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors",
+                        "Pricing",
+                        href="#pricing",
+                        class_name="text-lg font-medium text-[#64748B] hover:text-[#0B5FFF] transition-colors",
                     ),
                     rx.el.a(
                         rx.el.button(
-                            "Sign Up",
-                            class_name="px-4 py-2 bg-gradient-to-r from-indigo-600 to-violet-600 text-white text-sm font-semibold rounded-lg hover:shadow-lg active:scale-[0.98] transition-all duration-200",
+                            "Sign in",
+                            class_name="px-6 py-2.5 bg-[#0B5FFF] text-white text-lg font-semibold rounded-[4px] hover:opacity-90 active:scale-[0.98] transition-all",
                         ),
-                        href="#",
+                        href="/signin",
                     ),
-                    class_name="hidden md:flex items-center gap-6",
+                    class_name="hidden md:flex items-center gap-8",
                 ),
                 rx.el.button(
                     rx.cond(
                         LandingState.is_menu_open,
-                        rx.icon("x", class_name="h-6 w-6"),
-                        rx.icon("menu", class_name="h-6 w-6"),
+                        rx.icon("x", class_name="h-6 w-6 text-[#0F172A]"),
+                        rx.icon("menu", class_name="h-6 w-6 text-[#0F172A]"),
                     ),
                     on_click=LandingState.toggle_menu,
-                    class_name="md:hidden p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors",
+                    class_name="md:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-[#F8FAFC] rounded-[4px] transition-colors",
                 ),
-                class_name="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between",
+                class_name="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between",
             ),
             rx.cond(
                 LandingState.is_menu_open,
                 rx.el.div(
                     rx.el.div(
-                        rx.el.div(
-                            nav_link("Features", "#features"),
-                            nav_link("Pricing", "#pricing"),
-                            nav_link("About", "#"),
-                            class_name="flex flex-col gap-4 p-4 border-b border-gray-100",
+                        rx.el.a(
+                            "Pricing",
+                            href="#pricing",
+                            on_click=LandingState.close_menu,
+                            class_name="block px-6 py-4 text-lg font-medium text-[#64748B] border-b border-[#E2E8F0]",
                         ),
                         rx.el.div(
                             rx.el.a(
-                                "Log In",
-                                href="#",
-                                class_name="block w-full text-center py-2 text-sm font-medium text-gray-600",
+                                rx.el.button(
+                                    "Sign in",
+                                    class_name="w-full py-3 bg-[#0B5FFF] text-white font-bold rounded-[4px]",
+                                ),
+                                href="/signin",
+                                on_click=LandingState.close_menu,
                             ),
-                            rx.el.button(
-                                "Sign Up",
-                                class_name="w-full py-2 bg-gradient-to-r from-indigo-600 to-violet-600 text-white text-sm font-semibold rounded-lg",
-                            ),
-                            class_name="p-4 flex flex-col gap-3",
+                            class_name="p-6",
                         ),
-                        class_name="md:hidden bg-white border-b border-gray-200 shadow-xl animate-in fade-in slide-in-from-top-4 duration-200",
+                        class_name="md:hidden bg-white border-b border-[#E2E8F0] shadow-xl",
                     ),
-                    class_name="absolute top-16 left-0 w-full z-40",
+                    class_name="absolute top-20 left-0 w-full z-40",
                 ),
             ),
             class_name="relative",
         ),
-        class_name="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50",
+        class_name="fixed top-0 w-full z-50 bg-white border-b border-[#E2E8F0]",
     )

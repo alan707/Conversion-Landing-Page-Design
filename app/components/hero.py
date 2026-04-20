@@ -5,32 +5,32 @@ def hero() -> rx.Component:
     return rx.el.section(
         rx.el.div(
             rx.el.div(
-                rx.el.span(
-                    "New: Version 2.0 is now live ✦",
-                    class_name="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-100 mb-8",
-                ),
                 rx.el.h1(
-                    "Manage your accounts with absolute precision.",
-                    class_name="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 mb-6 leading-[1.1]",
+                    "Your LLC filings, filed in minutes.",
+                    class_name="text-[32px] md:text-[48px] font-bold text-[#0F172A] mb-8 leading-tight",
                 ),
                 rx.el.p(
-                    "Nexus provides the ultimate workspace for modern teams to manage, scale, and secure their digital infrastructure with a single intuitive interface.",
-                    class_name="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed",
+                    "Auto-prepared California Statement of Information and Illinois Annual Report filings. Never miss a deadline, never retype your entity info.",
+                    class_name="text-[18px] md:text-[20px] text-[#64748B] mb-12 max-w-3xl leading-relaxed",
                 ),
                 rx.el.div(
-                    rx.el.button(
-                        "Get Started Free",
-                        class_name="px-8 py-4 bg-gradient-to-r from-indigo-600 to-violet-600 text-white font-bold rounded-xl shadow-lg hover:shadow-indigo-200 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300",
+                    rx.el.a(
+                        rx.el.button(
+                            "Get started — 1 LLC free",
+                            class_name="w-full md:w-auto min-h-[56px] px-8 py-4 bg-[#0B5FFF] text-white font-bold rounded-[4px] hover:opacity-90 transition-all text-lg flex items-center justify-center",
+                        ),
+                        href="/signin",
+                        class_name="w-full md:w-auto",
                     ),
-                    rx.el.button(
-                        "Log In to Dashboard",
-                        class_name="px-8 py-4 bg-white text-gray-700 font-bold border border-gray-200 rounded-xl shadow-sm hover:bg-gray-50 hover:border-gray-300 active:scale-[0.98] transition-all duration-300",
+                    rx.el.p(
+                        "Built by a multi-LLC owner who got tired of paying lawyers for paperwork. No password to remember — we sign you in with a magic link.",
+                        class_name="mt-6 text-[15px] text-[#64748B] max-w-md",
                     ),
-                    class_name="flex flex-col sm:flex-row items-center justify-center gap-4",
+                    class_name="flex flex-col items-start",
                 ),
-                class_name="text-center max-w-4xl mx-auto",
+                class_name="max-w-5xl mx-auto px-6",
             ),
-            class_name="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32",
+            class_name="pt-32 pb-24 md:pt-40 md:pb-32",
         ),
-        class_name="relative bg-gradient-to-b from-indigo-50/50 to-white pt-16 overflow-hidden",
+        class_name="bg-[#F8FAFC] w-full",
     )

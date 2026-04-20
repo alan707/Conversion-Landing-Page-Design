@@ -1,7 +1,7 @@
 import reflex as rx
 from app.components.navbar import navbar
 from app.components.hero import hero
-from app.components.features import features_section
+from app.components.value_props import value_props
 from app.components.pricing import pricing_section
 from app.components.footer import footer
 
@@ -10,10 +10,10 @@ def index() -> rx.Component:
     return rx.el.main(
         navbar(),
         hero(),
-        features_section(),
+        value_props(),
         pricing_section(),
         footer(),
-        class_name="min-h-screen bg-white font-['Inter'] selection:bg-indigo-100 selection:text-indigo-900",
+        class_name="min-h-screen bg-white font-['Inter'] selection:bg-blue-100 selection:text-slate-900",
     )
 
 
