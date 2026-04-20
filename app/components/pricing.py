@@ -13,7 +13,7 @@ def pricing_card(
             ),
             rx.el.p(
                 description,
-                class_name="text-[18px] text-[#64748B] mb-10 leading-relaxed flex-1",
+                class_name="text-[18px] text-[#64748B] mb-10 leading-relaxed min-h-[100px] flex-1",
             ),
             rx.el.a(
                 rx.el.button(
@@ -29,7 +29,7 @@ def pricing_card(
             ),
             class_name="p-8 h-full flex flex-col",
         ),
-        class_name="bg-white border border-[#E2E8F0] rounded-[4px]",
+        class_name="bg-white border border-[#E2E8F0] rounded-[4px] flex flex-col",
     )
 
 
@@ -59,13 +59,13 @@ def pricing_section() -> rx.Component:
                     "For investors with larger portfolios.",
                     is_solid=False,
                 ),
-                class_name="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12",
+                class_name="grid grid-cols-1 md:grid-cols-3 gap-8",
             ),
             rx.el.p(
                 "State filing fees charged separately when each filing is submitted — $20 for California Statement of Information, $75 for Illinois Annual Report. No markup.",
-                class_name="text-[15px] text-[#64748B] text-left",
+                class_name="text-[15px] text-[#64748B] text-left mt-12",
             ),
-            class_name="max-w-5xl mx-auto px-6 py-24",
+            class_name="max-w-5xl mx-auto px-6 py-24 md:py-32",
         ),
         id="pricing",
         class_name="bg-[#F8FAFC]",

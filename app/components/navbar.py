@@ -15,12 +15,12 @@ def navbar() -> rx.Component:
                     rx.el.a(
                         "Pricing",
                         href="#pricing",
-                        class_name="text-lg font-medium text-[#64748B] hover:text-[#0B5FFF] transition-colors",
+                        class_name="text-[17px] font-medium text-[#64748B] hover:text-[#0B5FFF] transition-colors",
                     ),
                     rx.el.a(
                         rx.el.button(
                             "Sign in",
-                            class_name="px-6 py-2.5 bg-[#0B5FFF] text-white text-lg font-semibold rounded-[4px] hover:opacity-90 active:scale-[0.98] transition-all",
+                            class_name="px-6 py-2.5 bg-[#0B5FFF] text-white text-[16px] font-semibold rounded-[4px] hover:opacity-90 active:scale-[0.98] transition-all",
                         ),
                         href="/signin",
                     ),
@@ -35,7 +35,7 @@ def navbar() -> rx.Component:
                     on_click=LandingState.toggle_menu,
                     class_name="md:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-[#F8FAFC] rounded-[4px] transition-colors",
                 ),
-                class_name="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between",
+                class_name="max-w-5xl mx-auto px-6 h-24 flex items-center justify-between",
             ),
             rx.cond(
                 LandingState.is_menu_open,
@@ -65,5 +65,5 @@ def navbar() -> rx.Component:
             ),
             class_name="relative",
         ),
-        class_name="fixed top-0 w-full z-50 bg-white border-b border-[#E2E8F0]",
+        class_name="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-[#E2E8F0]",
     )

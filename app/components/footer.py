@@ -8,8 +8,8 @@ def footer() -> rx.Component:
                 rx.el.p("© 2026 LLC Keeper", class_name="text-[15px] text-[#64748B]"),
                 rx.el.div(
                     rx.el.a(
-                        "alan@llckeeper.com",
-                        href="mailto:alan@llckeeper.com",
+                        "contact@llckeeper.com",
+                        href="mailto:contact@llckeeper.com",
                         class_name="text-[15px] text-[#64748B] hover:text-[#0B5FFF]",
                     ),
                     rx.el.span(" · ", class_name="text-[#64748B]"),
