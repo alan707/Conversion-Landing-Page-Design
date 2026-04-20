@@ -13,7 +13,7 @@ def pricing_card(
             ),
             rx.el.p(
                 description,
-                class_name="text-[18px] text-[#64748B] mb-10 leading-relaxed min-h-[100px] flex-1",
+                class_name="text-[18px] text-[#64748B] mb-10 leading-relaxed min-h-[120px] flex-1",
             ),
             rx.el.a(
                 rx.el.button(
@@ -25,11 +25,11 @@ def pricing_card(
                     ),
                 ),
                 href="/signin",
-                class_name="w-full",
+                class_name="w-full mt-auto",
             ),
             class_name="p-8 h-full flex flex-col",
         ),
-        class_name="bg-white border border-[#E2E8F0] rounded-[4px] flex flex-col",
+        class_name="bg-white border border-[#E2E8F0] rounded-[4px] flex flex-col h-full transition-all hover:border-[#0B5FFF]/30",
     )
 
 

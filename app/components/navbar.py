@@ -35,7 +35,7 @@ def navbar() -> rx.Component:
                     on_click=LandingState.toggle_menu,
                     class_name="md:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center hover:bg-[#F8FAFC] rounded-[4px] transition-colors",
                 ),
-                class_name="max-w-5xl mx-auto px-6 h-24 flex items-center justify-between",
+                class_name="max-w-5xl mx-auto px-6 h-20 md:h-24 flex items-center justify-between",
             ),
             rx.cond(
                 LandingState.is_menu_open,
@@ -58,7 +58,7 @@ def navbar() -> rx.Component:
                             ),
                             class_name="p-6",
                         ),
-                        class_name="md:hidden bg-white border-b border-[#E2E8F0] shadow-xl",
+                        class_name="md:hidden bg-white border-b shadow-xl",
                     ),
                     class_name="absolute top-20 left-0 w-full z-40",
                 ),
